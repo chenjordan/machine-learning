@@ -5,7 +5,9 @@ import tensorflow as tf
 
 
 class NodeLookup(object):
-    ####这段代码就是将模型中的类别以数字形式转换为人类可以理解的文字形式
+    """
+    convert tag to human readable text
+    """
     def __init__(self,
                  label_lookup_path=None,
                  uid_lookup_path=None):
