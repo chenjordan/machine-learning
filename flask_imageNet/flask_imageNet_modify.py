@@ -80,7 +80,8 @@ def parse_classify_result(result_ori):
     result_list = []
 
     for i in result_ori:
-        result_list.append((i['label'], i['score']))
+        if float(i['score']) >= 0.05:
+            result_list.append((i['label'], i['score']))
     print('result_list %s' % result_list)
     return result_list
 
